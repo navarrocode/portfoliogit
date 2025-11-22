@@ -1,3 +1,8 @@
+:root {
+  --color-main: #398bca;
+  --color-secondary: #004466;
+}
+
 /* Basic reset */
 * {
   box-sizing: border-box;
@@ -23,6 +28,13 @@ img {
   padding: 1.5rem;
 }
 
+.container h2 {
+  color: var(--color-main);
+}
+.container h3 {
+  color: var(--color-secondary);
+}
+
 .header {
   background: white;
   border-bottom: 1px solid #ddd;
@@ -46,6 +58,12 @@ img {
   color: #0074d9;
 }
 
+.name-logo {
+  max-width: 180px;
+  height: auto;
+  display: block;
+}
+
 .hero-text h1 {
   font-size: 1.7rem;
   margin-bottom: 0.5rem;
@@ -63,16 +81,21 @@ img {
 
 .btn {
   padding: 0.5rem 1rem;
-  background: #0074d9;
+  background: var(--color-main);
   color: white;
   border-radius: 3px;
   text-decoration: none;
+  transition: all ease 0.5s;
+}
+
+.btn:hover {
+  box-shadow: var(--color-main) 0 0 10px;
 }
 
 .btn.secondary {
   background: white;
-  border: 1px solid #0074d9;
-  color: #0074d9;
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
 }
 
 .section-header {
@@ -113,6 +136,26 @@ img {
   border-radius: 999px;
   text-decoration: none;
   font-size: 0.8rem;
+}
+
+/* Placeholder box styling */
+.case-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 2px solid var(--color-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-main);
+  background: #f9fcff;
 }
 
 .contact-section {
