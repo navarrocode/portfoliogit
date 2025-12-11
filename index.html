@@ -8,39 +8,60 @@
   </head>
 
   <body>
+    <body>
+
+    <!-- NAVBAR -->
+<nav class="navbar">
+  <img src="images/Favicon RGB.png" alt="Logo" class="nav-logo" />
+
+  <div class="nav-container">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="./projects.html">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
     <header class="header">
       <div class="container hero">
-        <div class="logo-block">
-          <div class="name">
-            <img
-              src="images/horizontal rgb.svg"
-              alt="Daniel Navarro logo"
-              class="name-logo"
-            />
-          </div>
-          <div class="logo-square">DN</div>
-        </div>
-
-        <div class="hero-text">
-          <p>
-            I am a passionate full stack web developer focused on building
-            accessible, user centered web applications using modern
-            technologies.
-          </p>
-          <p>
-            I collaborate closely with cross functional teams to bring ideas to
-            life.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#contact" class="btn">Get In Touch</a>
-            <a href="#" class="btn secondary">Download Resume</a>
-          </div>
-        </div>
       </div>
     </header>
 
     <main class="container">
+      <div class="header-logo">
+        <img
+          src="images/horizontal rgb.svg"
+          alt="Daniel Navarro Logo"
+          class="header-logo-img"
+        />
+      </div>
+<section id="about"class="pitch-summary">
+  <div class="hero-left">
+            <div class="logo-square"></div>
+          </div>
+  <h2>About Me</h2>
+  <p>
+    Hi, I’m Daniel Navarro. I am a Southern California resident who enjoys technology and web development in all forms.
+  </p>
+  <p> I am a full-stack web developer who enjoys bringing
+    ideas to life through clean, interactive, user-focused websites. I work best
+    in collaborative environments where creativity is shared and every voice
+    matters. I aim to build websites that are efficient, inclusive, and genuinely
+    enjoyable to use. I am always excited for the next challenge.
+  I am eager to my knowledge and skillset in areas like healthcare, gaming, and much more.</p>
+  <div class="hero-actions">
+              <a
+                href="documents/Daniel_Navarro_Resume.pdf"
+                class="btn secondary"
+                download
+              >
+                Download Resume
+              </a>
+</section>
+
       <section class="section-header">
         <h2>Featured Case Studies</h2>
         <h3>Projects showcasing thoughtful design and robust engineering.</h3>
@@ -48,11 +69,15 @@
 
       <article class="case-study">
         <div class="case-image">
-          <div class="image-placeholder">Supply Post</div>
+          <div class="SupplyPost"></div>
         </div>
         <div class="case-content">
-          <div class="case-meta">Full Stack Developer · 1 month</div>
-          <h3>Supply Post</h3>
+          <div class="case-meta">Full Stack Developer · 1 week</div>
+
+          <h3>
+            <a href="supplypost.html" rel="noopener noreferrer">Supply Post</a>
+          </h3>
+
           <p class="case-subtitle">
             A concept for a large scale ecommerce platform focused on improving
             conversions and UX.
@@ -71,8 +96,14 @@
           </p>
 
           <div class="case-actions">
-            <a href="#">View Live</a>
-            <a href="#">View Code</a>
+            <a target="_blank" href="https://operation-base-camp.vercel.app"
+              >View Live</a
+            >
+            <a
+              target="_blank"
+              href="https://github.com/tsukidan/OperationBaseCamp"
+              >View Code</a
+            >
           </div>
         </div>
       </article>
@@ -80,7 +111,11 @@
       <article class="case-study">
         <div class="case-content">
           <div class="case-meta">Full Stack Developer · 1 month</div>
-          <h3>Simplitax</h3>
+
+          <h3>
+            <a href="simplitax.html" rel="noopener noreferrer">Simplitax</a>
+          </h3>
+
           <p class="case-subtitle">
             A receipt generator designed to simplify tax prep.
           </p>
@@ -98,23 +133,33 @@
           </p>
 
           <div class="case-actions">
-            <a href="#">View Live</a>
-            <a href="#">View Code</a>
+            <a target="_blank" href="https://tsukidan.github.io/simplitax/"
+              >View Live</a
+            >
+            <a target="_blank" href="https://github.com/tsukidan/simplitax"
+              >View Code</a
+            >
           </div>
         </div>
 
         <div class="case-image">
-          <div class="image-placeholder">Simplitax</div>
+          <div class="simplitax"></div>
         </div>
       </article>
 
       <article class="case-study">
         <div class="case-image">
-          <div class="image-placeholder">MySwitch</div>
+          <div class="MySwitchLife"></div>
         </div>
         <div class="case-content">
           <div class="case-meta">Full Stack Developer · 3 months</div>
-          <h3>MySwitch</h3>
+
+          <h3>
+            <a href="myswitchlife.html" rel="noopener noreferrer"
+              >MySwitchLife</a
+            >
+          </h3>
+
           <p class="case-subtitle">
             A Nintendo Switch game dashboard for organizing a personal library.
           </p>
@@ -132,15 +177,18 @@
           </p>
 
           <div class="case-actions">
-            <a href="#">View Live</a>
-            <a href="#">View Code</a>
+            <a target="_blank" href="https://myswitchlifedashboard.vercel.app"
+              >View Live</a
+            >
+            <a target="_blank" href="https://myswitchlifedashboard.vercel.app"
+              >View Code</a
+            >
           </div>
         </div>
       </article>
 
       <section id="contact" class="contact-section">
-        <h2>Lets Work Together</h2>
-        <p>Tell me a bit about your project and I'll reach out.</p>
+        <h2>Contact Me</h2>
 
         <form>
           <label>Name</label>

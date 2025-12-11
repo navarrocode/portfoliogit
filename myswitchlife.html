@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MySwitchLife - Case Study</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="header-logo">
+        <img
+          src="images/horizontal rgb.svg"
+          alt="Daniel Navarro Logo"
+          class="header-logo-img"
+        />
+      </div>
+      <div class="case-image">
+        <div class="MySwitchLife"></div>
+      </div>
+      <section class="case-detail-header case-detail">
+        <h2>MySwitchLife</h2>
+        <h3>Nintendo Switch Web Dashboard Case Study</h3>
+      </section>
+
+      <article class="case-detail">
+        <div class="case-meta">Full Stack Developer · 3 months</div>
+
+        <div class="case-actions">
+          <a target="_blank" href="https://myswitchlifedashboard.vercel.app"
+            >View Live</a
+          >
+          <a target="_blank" href="https://myswitchlifedashboard.vercel.app"
+            >View Code</a
+          >
+          <a href="index.html" class="btn secondary">Back to Portfolio</a>
+        </div>
+
+        <h4>Background</h4>
+        <p>
+          The objective of the MySwitchLife project was to create a personal
+          dashboard for Nintendo Switch users where they can see their games,
+          goals, activity, and friends all in one place. The project brief was
+          to make a full stack website from scratch that looks like a Nintendo
+          styled UI and actually works end to end. The reason behind it was to
+          provide a clean organized way to track play history and organize a
+          game library instead of random spreadsheets or notes. It is my biggest
+          project since and I wanted to show I can handle both the front end and
+          the back end parts together.
+        </p>
+
+        <h4>Problem Statement</h4>
+        <p>
+          The objective of the MySwitchLife project was to create a personal
+          dashboard for Nintendo Switch users where they can see their games,
+          goals, activity, and friends all in one place. The project brief was
+          to make a full stack website from scratch that looks like a Nintendo
+          styled UI and actually works end to end. The reason behind it was to
+          provide a clean organized way to track play history and organize a
+          game library instead of random spreadsheets or notes. It is my biggest
+          project since and I wanted to show I can handle both the front end and
+          the back end parts together.
+        </p>
+
+        <h4>Process</h4>
+        <p>
+          I started with the server using Node.js and Express, connected to
+          MongoDB, and set up a collection called library for saving games. I
+          implemented routes for the library like GET and POST and DELETE on
+          /api/games so users can load, save, and remove entries. For game data
+          I added a Twitch OAuth flow to fetch an access token and then used the
+          IGDB API to pull Nintendo Switch titles using a custom query that
+          filters by platform 130 and excludes unwanted ratings. I created
+          endpoints like /api/all-games for a big list and /api/recent-games for
+          a smaller subset, which the front end can request.
+        </p>
+        <p>
+          I mounted a goals handler on /api/goals so I can add, delete, and
+          toggle goals per game, and then I render them grouped by game id. On
+          the front end I built three main pages using HTML, CSS, and
+          JavaScript. The index dashboard has Recent Activity, Your Game
+          Library, Achievements and Goals, and Friend Activity. Recent activity
+          sorts by last_played and shows cards with the cover, name, and days
+          ago text.
+        </p>
+        <p>
+          The library is a responsive grid with hover effects and a View All
+          link to a full library page. Goals has a game selector and an Add
+          button which opens a small modal to create a new goal; goals render as
+          editable list items with checkboxes and a remove button. Friends is a
+          simple feed with avatars and a short line of what they played. I used
+          VanillaTilt for subtle 3D hover on covers and created reusable styles
+          like the red section headers and rounded panels. The UI is responsive
+          with grid layout switching to one column on mobile.
+        </p>
+        <p>
+          I also built a modal for game details with a canvas area and a right
+          side description, plus a smaller modal for picking the last played
+          date. All of this ties into the server endpoints so the dashboard can
+          fetch /api/games and /api/goals on load, then paint the UI
+          dynamically.
+        </p>
+
+        <h4>Results</h4>
+        <p>
+          The outcome was a working full stack web dashboard that feels like a
+          real app. It pulls curated Nintendo game data from IGDB using a server
+          proxy, saves a personal library into MongoDB, and manages per game
+          goals that can be added, edited, checked off, or removed. The
+          dashboard loads recent activity automatically based on last_played and
+          shows a clean grid of the entire library. It also includes a friend
+          activity section and a user settings page to round it out.
+        </p>
+        <p>
+          While not a client delivery, it met my scope for functionality and
+          design, and it proves I can integrate external APIs, database storage,
+          and a responsive front end together in one project. The project can be
+          viewed in full on my portfolio or GitHub when requested.
+        </p>
+
+        <h4>Synopsis</h4>
+        <p>
+          This work is similar to other dashboards and trackers I have built for
+          myself, but this time focused on Nintendo Switch specifically. It
+          references modern web dashboards and some Nintendo themed UI
+          inspiration, like the red color and rounded panels, but everything was
+          made by me.
+        </p>
+        <p>
+          I was motivated by the idea of having a simple home page that says
+          Welcome and then shows recent play, a library grid, a goals checklist,
+          and a friend feed without having to dig through menus. I also wanted
+          to use real data patterns, like saving games to a database and pulling
+          game info from an external API, not just hard coded items.
+        </p>
+      </article>
+    </main>
+
+    <footer class="footer">© 2025 Daniel Navarro. All rights reserved.</footer>
+  </body>
+</html>
