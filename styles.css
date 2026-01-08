@@ -269,6 +269,8 @@ img {
 .case-detail {
   max-width: 800px;
   margin: 0 auto 3rem;
+  background: rgb(235, 235, 235);
+  padding: 2rem;
 }
 
 .case-detail h4 {
